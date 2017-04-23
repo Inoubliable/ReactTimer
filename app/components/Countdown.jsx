@@ -8,11 +8,11 @@ class Countdown extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="text-center">
         <h1>Countdown</h1>
       </div>
     );
   }
 }
 
-module.exports = Timer;
+module.exports = Countdown;

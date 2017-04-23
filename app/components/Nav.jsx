@@ -26,12 +26,16 @@ class Nav extends React.Component {
         />
         <Drawer open={this.state.open}>
           <MenuItem><h2>React Timer App</h2></MenuItem>
-          <MenuItem>
-          	<IndexLink to="/">Timer</IndexLink>
-          </MenuItem>
-          <MenuItem>
-          	<Link to="/">Countdown</Link>
-          </MenuItem>
+          <Link to="/timer" activeClassName="active-link">
+	          <MenuItem>
+	          	Timer
+	          </MenuItem>
+          </Link>
+          <Link to="/countdown" activeClassName="active-link">
+          	<MenuItem>
+          		Countdown
+          	</MenuItem>
+          </Link>
         </Drawer>
       </div>
     );

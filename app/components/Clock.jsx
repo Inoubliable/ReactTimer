@@ -23,7 +23,7 @@ class Clock extends React.Component {
 
   render() {
 
-    var {totalSeconds} = this.props;
+    var {totalSeconds, countdownStatus} = this.props;
     var seconds = totalSeconds % 60;
 
     return (

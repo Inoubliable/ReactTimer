@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAa;EACZ,UAAU,EAAE,MAAM;;ACDnB,WAAY;EACX,KAAK,EAAE,KAAK;;AAGb,CAAE;EACD,eAAe,EAAE,IAAI;EACrB,KAAK,ECFG,IAAK",
-"sources": ["base/_main.scss","components/_nav.scss","base/_variables.scss"],
+"mappings": "AAAA,YAAa;EACZ,UAAU,EAAE,MAAM;;AAGnB,UAAW;EACV,WAAW,ECEA,UAAU;;ACPtB,WAAY;EACX,KAAK,EAAE,KAAK;;AAGb,CAAE;EACD,eAAe,EAAE,IAAI;EACrB,KAAK,EDFG,IAAK;;ACKd,YAAa;EACZ,WAAW,EAAE,IAAI",
+"sources": ["base/_main.scss","base/_variables.scss","components/_nav.scss"],
 "names": [],
 "file": "app.css"
 }

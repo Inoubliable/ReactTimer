@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var expect = require('expect');
 var TestUtils = require('react-addons-test-utils');
 var $ = require('jQuery');
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 var CountdownForm = require('CountdownForm');
 
@@ -13,7 +14,7 @@ describe('CountdownForm', () => {
 
 	it('should call onSetCountdown if valid seconds entered', () => {
 		var spy = expect.createSpy();
-		var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+		var countdownForm = TestUtils.renderIntoDocument(<MuiThemeProvider><CountdownForm onSetCountdown={spy}/></MuiThemeProvider>);
 		var $el = $(ReactDOM.findDOMNode(countdownForm));
 
 		countdownForm.refs.seconds.value = '223';
@@ -24,7 +25,7 @@ describe('CountdownForm', () => {
 
 	it('should not call onSetCountdown if invalid seconds entered', () => {
 		var spy = expect.createSpy();
-		var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+		var countdownForm = TestUtils.renderIntoDocument(<MuiThemeProvider><CountdownForm onSetCountdown={spy}/></MuiThemeProvider>);
 		var $el = $(ReactDOM.findDOMNode(countdownForm));
 
 		countdownForm.refs.seconds.value = 'bla';

@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var expect = require('expect');
 var TestUtils = require('react-addons-test-utils');
 var $ = require('jQuery');
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 var Countdown = require('Countdown');
 
@@ -13,7 +14,7 @@ describe('Countdown', () => {
 
 	describe('handleSetCountdown', () => {
 		it('should set state to started and countdown', (done) => {
-			var countdown = TestUtils.renderIntoDocument(<Countdown/>);
+			var countdown = TestUtils.renderIntoDocument(<MuiThemeProvider><Countdown/></MuiThemeProvider>);
 			countdown.handleSetCountdown(10);
 
 			expect(countdown.state.count).toBe(10);
@@ -26,7 +27,7 @@ describe('Countdown', () => {
 		});
 
 		it('should countdown to 0 and stop there', (done) => {
-			var countdown = TestUtils.renderIntoDocument(<Countdown/>);
+			var countdown = TestUtils.renderIntoDocument(<MuiThemeProvider><Countdown/></MuiThemeProvider>);
 			countdown.handleSetCountdown(1);
 
 			setTimeout(() => {
@@ -36,7 +37,7 @@ describe('Countdown', () => {
 		});
 
 		it('should pause countdown on paused status', (done) => {
-			var countdown = TestUtils.renderIntoDocument(<Countdown/>);
+			var countdown = TestUtils.renderIntoDocument(<MuiThemeProvider><Countdown/></MuiThemeProvider>);
 			countdown.handleSetCountdown(3);
 			countdown.handleStatusChange('paused');
 
@@ -48,7 +49,7 @@ describe('Countdown', () => {
 		});
 
 		it('should rest count on stopped status', (done) => {
-			var countdown = TestUtils.renderIntoDocument(<Countdown/>);
+			var countdown = TestUtils.renderIntoDocument(<MuiThemeProvider><Countdown/></MuiThemeProvider>);
 			countdown.handleSetCountdown(3);
 			countdown.handleStatusChange('stopped');
 
